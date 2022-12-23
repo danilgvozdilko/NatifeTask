@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">natifeTask</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="SplashFragment">SplashFragment</string>
+    <string name="enter_your_e_mail">Enter your e-mail</string>
+    <string name="enter_password">Enter password</string>
+    <string name="registrate">Registrate</string>
+    <string name="do_you_already_have_an_account">Do you already have an account?</string>
+    <string name="login">Login</string>
+    <string name="home">Home</string>
+    <string name="selected">Selected</string>
+    <string name="password">PASSWORD</string>
+    <string name="email">EMAIL</string>
+    <string name="user_status">USER_STATUS</string>
+    <string name="need_login">You need to login</string>
+    <string name="need_login_or_create">You need to login or create account</string>
+    <string name="acc_already_use">An account with this data is already in use</string>
+    <string name="check_email">Check your email or password or create an account</string>
+    <string name="logedIn">LOGGED IN</string>
+    <string name="settings">Settings</string>
+    <string name="personal_data">Personal data</string>
+    <string name="natife_task">Natife Task</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
+    <string name="enter_limit_of_gifs">Enter the number of gifs to upload</string>
+    <string name="load">Load</string>
+    <string name="my_email">My email</string>
+    <string name="my_password">My password</string>
+    <string name="name">Name</string>
+    <string name="loading">Loading...</string>
+</resources>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/start_graph"
+    app:startDestination="@id/splashFragment">
+
+    <!--    Splash-->
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.natifetask.ui.splash.SplashFragment"
+        android:label="@string/SplashFragment"
+        tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/action_splashFragment_to_registrationFragment"
+            app:destination="@id/registrationFragment" />
+    </fragment>
+
+    <!--    Registration-->
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:name="com.example.natifetask.ui.registration.RegistrationFragment"
+        tools:layout="@layout/fragment_registration">
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_registerFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+
+    <!--    Login-->
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.natifetask.ui.login.LoginFragment"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_RegistrateFragment"
+            app:destination="@id/registrationFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_MainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+
+    <!--    Main-->
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.natifetask.ui.main.MainFragment"
+        android:label="mainFragment"
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_mainFragment_to_Selected"
+            app:destination="@id/selectedFragment" />
+        <argument
+            android:name="selected"
+            app:argType="com.example.natifetask.data.GifDTO" />
+    </fragment>
+
+    <!--    Selected-->
+    <fragment
+        android:id="@+id/selectedFragment"
+        android:name="com.example.natifetask.ui.selectedGif.SelectedFragment"
+        tools:layout="@layout/fragment_selected">
+        <argument
+            android:name="selected"
+            android:defaultValue="@null"
+            app:argType="com.example.natifetask.data.GifDTO"
+            app:nullable="true" />
+    </fragment>
+
+    <!--    Settings-->
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.natifetask.ui.settings.SettingsFragment"
+        tools:layout="@layout/fragment_settings">
+        <action
+            android:id="@+id/action_SettingsFragment_to_PersonalData"
+            app:destination="@id/personal_data" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/personal_data"
+        android:name="com.example.natifetask.ui.personalData.PersonalDataFragment"
+        tools:layout="@layout/fragment_personal_data" />
+</navigation>
