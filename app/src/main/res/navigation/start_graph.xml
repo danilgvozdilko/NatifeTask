@@ -29,7 +29,7 @@
             app:destination="@id/mainFragment" />
     </fragment>
 
-    <!--    Login-->
+    <!--   Login-->
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.example.natifetask.ui.login.LoginFragment"
