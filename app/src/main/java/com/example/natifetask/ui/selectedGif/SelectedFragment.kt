@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import com.bumptech.glide.Glide
-import com.example.natifetask.data.GifDTO
+import com.example.natifetask.data.GifItem
 import com.example.natifetask.databinding.FragmentSelectedBinding
 import com.example.natifetask.ui.base.BaseFragment
 import dagger.hilt.android.AndroidEntryPoint
@@ -32,7 +32,7 @@ class SelectedFragment : BaseFragment<SelectedViewModel>() {
         setUI(selected)
     }
 
-    private fun setUI(selected: GifDTO?) {
+    private fun setUI(selected: GifItem?) {
         binding.name.text = selected?.username
         activity?.let {
             Glide.with(it).load(selected?.images?.original?.url).into(binding.imageView)

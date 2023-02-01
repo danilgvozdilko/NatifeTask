@@ -1,6 +1,6 @@
 package com.example.natifetask.di
 
-import com.example.natifetask.implementation.GetGifApiImpl
+import com.example.natifetask.repository.GetGifApiImpl
 import com.example.natifetask.interfaces.GetGifApi
 import dagger.Binds
 import dagger.Module

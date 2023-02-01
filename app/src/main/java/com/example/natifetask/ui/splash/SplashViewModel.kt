@@ -1,7 +1,7 @@
 package com.example.natifetask.ui.splash
 
 import androidx.lifecycle.viewModelScope
-import com.example.natifetask.data.SplashState
+import com.example.natifetask.data.state.SplashState
 import com.example.natifetask.navigation.Command
 import com.example.natifetask.navigation.Router
 import com.example.natifetask.ui.base.BaseViewModel

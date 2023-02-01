@@ -7,14 +7,14 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.natifetask.data.GifDTO
+import com.example.natifetask.data.GifItem
 import com.example.natifetask.databinding.ItemGifBinding
 
 class MainFragmentAdapter(
-    private val onClickProductListener: (GifDTO) -> Unit,
+    private val onClickProductListener: (GifItem) -> Unit,
 
     ) :
-    ListAdapter<GifDTO, MainFragmentAdapter.GifViewHolder>(DiffCallback()) {
+    ListAdapter<GifItem, MainFragmentAdapter.GifViewHolder>(DiffCallback()) {
 
     override fun onBindViewHolder(holderShop: GifViewHolder, position: Int) {
         holderShop.bind(currentList[position], onClickProductListener)
@@ -32,7 +32,7 @@ class MainFragmentAdapter(
 
     class GifViewHolder(private var binding: ItemGifBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun bind(gif: GifDTO, onClickProductListener: (GifDTO) -> Unit) {
+        fun bind(gif: GifItem, onClickProductListener: (GifItem) -> Unit) {
             Log.d("tagggg", "${gif.url}")
             binding.apply {
                 Glide.with(itemView.context).load(gif.images.original.url).into(imageView)
@@ -45,13 +45,13 @@ class MainFragmentAdapter(
         }
     }
 
-    class DiffCallback : DiffUtil.ItemCallback<GifDTO>() {
+    class DiffCallback : DiffUtil.ItemCallback<GifItem>() {
 
-        override fun areItemsTheSame(oldItem: GifDTO, newItem: GifDTO): Boolean {
+        override fun areItemsTheSame(oldItem: GifItem, newItem: GifItem): Boolean {
             return oldItem.id == newItem.id
         }
 
-        override fun areContentsTheSame(oldItem: GifDTO, newItem: GifDTO): Boolean {
+        override fun areContentsTheSame(oldItem: GifItem, newItem: GifItem): Boolean {
             return oldItem == newItem
         }
     }

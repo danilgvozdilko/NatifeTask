@@ -1,4 +1,4 @@
-package com.example.natifetask.data
+package com.example.natifetask.data.state
 
 data class SplashState(
     val dataLoaded: Boolean = false,

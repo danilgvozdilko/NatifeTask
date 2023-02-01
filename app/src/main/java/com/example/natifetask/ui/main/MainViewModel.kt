@@ -2,8 +2,8 @@ package com.example.natifetask.ui.main
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
-import com.example.natifetask.data.GifDTO
-import com.example.natifetask.data.GifData
+import com.example.natifetask.data.GifItem
+import com.example.natifetask.data.Gif
 import com.example.natifetask.navigation.Command
 import com.example.natifetask.navigation.Router
 import com.example.natifetask.ui.base.BaseViewModel
@@ -18,7 +18,7 @@ class MainViewModel @Inject constructor(
     private val router: Router
 ) : BaseViewModel() {
 
-    val listImage = MutableLiveData<GifData?>()
+    val listImage = MutableLiveData<Gif?>()
 
     fun getGifs(limit: String) {
         viewModelScope.launch {
@@ -27,8 +27,8 @@ class MainViewModel @Inject constructor(
         }
     }
 
-    fun navigateToSelected(gifDTO: GifDTO) {
-        router.execute(Command.Navigate(MainScreen(gifDTO)))
+    fun navigateToSelected(gifItem: GifItem) {
+        router.execute(Command.Navigate(MainScreen(gifItem)))
     }
 
 }

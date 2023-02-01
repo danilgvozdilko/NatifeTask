@@ -6,7 +6,7 @@ import kotlinx.android.parcel.RawValue
 
 
 @Parcelize
-data class GifDTO(
+data class GifItem(
     val id: String = "",
     val slug: String = "",
     val url: String = "",
